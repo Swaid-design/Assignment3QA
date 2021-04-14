@@ -5,8 +5,11 @@ install:
 - pip install -r requirements.txt
 - pip install coverage
 - pip install coveralls
+- pip install --upgrade pyflakes
 
 script:
 - coverage run -m pytest -v app_test.py
+- pyflakes app.py
+- pyflakes app_test.py
 after_success:
 - coveralls
