@@ -157,17 +157,3 @@ if __name__ == "__main__":
             print("Your BMI is: ", person.BMICalc(), "which is considered: ", person.BMI_category())
             print("---------------------------------------------------")
             selection = 0
-
-
-
-
-        
-
-
-
-
-
-
-@app.route('/test')
-def test():
-    return "Works!"
