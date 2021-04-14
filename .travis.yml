@@ -3,5 +3,9 @@ python:
 - "3.6"
 install:
 - pip install -r requirements.txt
+- pip install coverage
+
 script:
-- python -m pytest -v 
+- coverage run -m pytest -v app_test.py
+after_success:
+- coveralls
