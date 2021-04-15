@@ -127,33 +127,4 @@ class Retirement_Savings:
 
 
 if __name__ == "__main__":
-    selection = 0
-    while selection == 0:
-        print("Option 1: BMI Calculator")
-        print("Option 2: Retirement Savings Calculator")
-        print("Option 3: Exit Program")
-        selection = int(input("Select an option: "))
-        if (selection == 2):
-            age = int(input("Your age: "))
-            salary = int(input("Your salary: "))
-            percent = float(input("Your percentage saved each year: "))
-            goal = int(input("Your goal: "))
-            person = Retirement_Savings(age, salary, percent, goal)
-            print("---------------------------------------------------")
-            print("You will be ", person.age_goal_met(), "when you achieve your goal.")
-            print("---------------------------------------------------")
-            selection = 0
-        if (selection == 3):
-            exit()
-        if(selection == 1):
-            weight = int(input("Your weight in lbs: "))
-            height = str(input("Your height (ft in): "))
-            
-            person = BMI_Calculator(height, weight)
-            person.set_height()
-            person.set_weight()
-
-            print("---------------------------------------------------")
-            print("Your BMI is: ", person.BMICalc(), "which is considered: ", person.BMI_category())
-            print("---------------------------------------------------")
-            selection = 0
+    app.run()
