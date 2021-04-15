@@ -10,7 +10,7 @@ install:
 script:
 - coverage run -m pytest -v app_test.py
 - pyflakes app.py
-- pyflakes app_test.py
+
 after_success:
 - coveralls
 - coverage report -m
